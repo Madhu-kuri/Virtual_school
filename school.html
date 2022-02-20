@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual School</title>
+    <link rel="stylesheet" type="text/css" href="school.css">
+    <!-- <script src="js/jquery-1.11.1.min.js"></script> -->
+</head>
+
+<body>
+    <div class="loginbox">
+        <h1><i>VIRTUAL LEARNING ENVIRONMENT! </i></h1>
+        <h3>Entry Gate for Virtual School</i></h3>
+        <form id="myform">
+            <div class="tex">
+                <input type="email" name="email" required>
+                <span></span>
+                <label for="email">Email</label>
+            </div>
+            <div class="tex">
+                <input type="password" name="psw" required>
+                <span></span>
+                <label for="psw">Password</label>
+            </div>
+            <button type="button" id="submit" class="button" onclick="this.classList.toggle('button--loading')">
+                <span class="button__text"><a href="https://amarveer-banwait.github.io/virtual/">Sign In</a></span>
+            </button>
+        </form>
+    </div>
+    <script>
+        const btn = document.querySelector(".button");
+        btn.classList.add("button--laoding");
+        btn.classList.remove("button--laoding");
+    </script>
+</body>
+
+</html>

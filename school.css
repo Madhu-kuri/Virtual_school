@@ -1,0 +1,139 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-image: url(https://miro.medium.com/max/1400/1*ASfIm0LcdmUbSjkj_tc-Yg.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: sans-serif;
+    /* width:200px ; */
+    height: 100vh;
+}
+h1{
+    color: #fff;
+    margin: 0;
+    font-family: cursive;
+    color: #000;
+    
+}
+h3{
+    color: rgb(250, 37, 29);
+    font-family: cursive;
+}
+
+
+.loginbox{
+     width: 480px;
+    height: 460px;
+    /* text-align: center; */
+    top: 45%;
+    left: 25%;
+    transform: translate(-44%, -50%);
+    box-sizing: border-box;
+    padding: 50px 30px;
+    background-color: rgba(17, 4, 66, 0.281);
+    /* background: rgba(red, green, rgba(0, 255, 242, 0.568), alpha);
+    color: rgb(12, 2, 22); */
+    border-radius: 8px;
+    position: absolute;
+}
+.loginbox form{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+form .tex{
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+}
+.tex input{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 13px;
+    background: none;
+    /* color: #fff; */
+    border: none;
+    outline: none;
+}
+.tex label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color:#adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+.tex span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #fa3c95;
+    transition: .5s;
+}
+.tex input:focus ~ label,
+.tex input:valid ~ label{
+    top: -5px;
+    color: #2691d9;
+}
+.tex input:focus ~ span::before,
+.tex input:valid ~ span::before{
+    width: 100%;
+}
+.button__text{
+    text-decoration: none;
+}
+
+.button {
+    border: 2px ;
+    border-bottom: rgb(22, 255, 146);
+    border-top: rgb(252, 58, 97);
+    border-radius: 15px;
+    font-size: 18px;
+    width: 75%;
+    height: 40px;
+    background: #eeca28;
+    color: #000000;
+    outline: none;
+    margin-top: 4%;
+    border: 1px solid;
+    font-weight: 700;
+    cursor: pointer;
+}
+.button--loading:hover{
+    background-color: rgb(233, 55, 179);
+    transition: .5s;
+    cursor:default;
+}
+.button--loading .button__text{
+    visibility: hidden;
+    opacity: 0;
+}
+.button--loading::after{
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 70%;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    right: 20%;
+    border: 5px solid transparent;
+    border-top-color:#ffffff ;
+    border-radius: 50%;
+    animation: button-loading-spinner 1s ease infinite;
+}
+@keyframes button-loading-spinner{
+    from{
+        transform: rotate(8turn);
+    }
+    to{
+        transform: rotate(1turn);
+    }
+}
